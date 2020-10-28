@@ -23,8 +23,6 @@ namespace TPLab1_CSharp_console
             //условие использование Яндекс API
             Console.WriteLine("Данные предоставлены сервисом Яндекс.Расписания http://rasp.yandex.ru/");
 
-            //Ввод данных--------------------------РАСКОМЕНЬТЬ В ФИНАЛЕ!!!!
-
             do
             {
                 Console.Write("Введите город отправления (Москва, Волгоград, Симферополь): ");
@@ -38,18 +36,7 @@ namespace TPLab1_CSharp_console
                 if (check_string == "д" || check_string == "Д" || check_string == "Y" || check_string == "y")
                     finish_paste = true;
             } while (finish_paste != true);
-
-            //-------------------------------------------------------
-
-            //-------------------------------------ЗАКОМЕНЬТЬ В ФИНАЛЕ!!!!
-            /*
-            city_from = "Волгоград";
-            city_to = "Москва";
-            date_arrival = "2019-04-08";
-            Console.WriteLine($"Проверка. В системе задано:\n\r\tГород отправления: {city_from}\n\r\tГород прибытия: {city_to}\n\r\tДата отправления: {date_arrival}");
-            */
-            //---------------------------------------
-
+            
             //Собираем строку для запроса
             URIBuilder URI_my = new URIBuilder();
             URI_my.Bild(city_from, city_to, date_arrival);
@@ -101,9 +88,6 @@ namespace TPLab1_CSharp_console
                 Console.WriteLine("Well done");
                 Console.ReadKey();
 
-                //Console.SetBufferSize(132, 1000);
-                //Console.WriteLine(streamReader.ReadToEnd());
-                //Console.ReadKey();
             }
         }
     }
